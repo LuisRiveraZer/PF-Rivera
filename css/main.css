@@ -1,3 +1,43 @@
+@font-face {
+  font-family: merienda;
+  src: url(/media/fonts/Merienda-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: ubuntu-medium;
+  src: url(/media/fonts/Ubuntu-Medium.ttf);
+}
+@font-face {
+  font-family: ubuntu-regular;
+  src: url(/media/fonts/Ubuntu-Regular.ttf);
+}
+.fuenteMerienda {
+  font-family: merienda;
+  font-size: 32px;
+  font-style: normal;
+  color: black;
+}
 
+.fuenteUbuntu__medium {
+  font-family: ubuntu-medium;
+  font-size: 28px;
+  font-style: normal;
+  color: black;
+}
+.fuenteUbuntu__regular {
+  font-family: ubuntu-regular;
+  font-size: 24px;
+  font-style: normal;
+  color: black;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  background: linear-gradient(45deg, rgb(10, 3, 100) 30%, rgb(100, 33, 10) 70%);
+}
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,44 @@
+// Font Face 
+
+@font-face{
+    font-family: merienda;
+    src: url(/media/fonts/Merienda-VariableFont_wght.ttf);
+}
+
+@font-face{
+    font-family: ubuntu-medium;
+    src: url(/media/fonts/Ubuntu-Medium.ttf);
+}
+
+@font-face{
+    font-family: ubuntu-regular;
+    src: url(/media/fonts/Ubuntu-Regular.ttf);
+}
+
+
+// Font Styles
+
+.fuenteMerienda{
+    font-family: merienda;
+    font-size: 32px;
+    font-style: normal;
+    color: black;
+}
+
+.fuenteUbuntu{
+    
+    &__medium{
+        font-family: ubuntu-medium;
+        font-size: 28px;
+        font-style: normal;
+        color: black;
+    }
+
+    &__regular{
+        font-family: ubuntu-regular;
+        font-size: 24px;
+        font-style: normal;
+        color: black;
+
+    }
+}
