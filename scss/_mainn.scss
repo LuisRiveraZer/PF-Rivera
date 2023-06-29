@@ -1,0 +1,66 @@
+
+.gridIndex{
+    display: grid;
+    width: auto;
+    height: auto;
+
+    grid-template-columns: repeat(3, 33.33vw, 33.33vw, 33.33vw);
+    grid-template-rows: repeat(4, 250px);
+        
+        grid-template-areas: 
+        "header presentacion presentacion"
+        "nav bebidas desayunos"
+        "nav carnes mariscos"
+        "0 ninos postres";
+        
+        column-gap: 5px;
+        row-gap: 5px; 
+}
+header{
+    grid-area: header;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.presentacion{
+    grid-area: presentacion;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    background-color: #f5f5f5;
+}
+nav{
+    grid-area: nav;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+}
+.bebidas{
+    grid-area: bebidas;
+    display: grid;
+}
+.desayunos{
+    grid-area: desayunos;
+    display: grid;
+}
+.carnes{
+    grid-area: carnes;
+    display: grid;
+}
+.mariscos{
+    grid-area: mariscos;
+    display: grid;
+}
+.ninos{
+    grid-area: ninos;
+    display: grid;
+}
+.postres{
+    grid-area: postres;
+    display: grid;
+}

@@ -36,8 +36,112 @@
   padding: 0;
 }
 
-:root {
-  background: linear-gradient(45deg, rgb(10, 3, 100) 30%, rgb(100, 33, 10) 70%);
+header {
+  top: 0;
+  left: 0;
+  background-color: #333;
+  padding: 10px;
+}
+header h1 a {
+  text-decoration: none;
+  color: #fff;
+}
+header h1 a:hover {
+  transition: all 1s;
+  color: #f0f0f0;
+}
+
+nav {
+  background-color: #f5f5f5;
+  height: auto;
+  width: auto;
+}
+nav ul {
+  list-style: none;
+  margin: 10px;
+  padding: 10px;
+  flex-direction: column;
+  align-items: inherit;
+}
+nav ul li {
+  margin: 10px;
+  padding: 10px;
+}
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 28px;
+}
+nav ul li a:hover {
+  transition: all 0.5s;
+  margin: 15px;
+}
+
+.gridIndex {
+  display: grid;
+  width: auto;
+  height: auto;
+  grid-template-columns: repeat(3, 33.33vw, 33.33vw, 33.33vw);
+  grid-template-rows: repeat(4, 250px);
+  grid-template-areas: "header presentacion presentacion" "nav bebidas desayunos" "nav carnes mariscos" "0 ninos postres";
+  column-gap: 5px;
+  row-gap: 5px;
+}
+
+header {
+  grid-area: header;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.presentacion {
+  grid-area: presentacion;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+  background-color: #f5f5f5;
+}
+
+nav {
+  grid-area: nav;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.bebidas {
+  grid-area: bebidas;
+  display: grid;
+}
+
+.desayunos {
+  grid-area: desayunos;
+  display: grid;
+}
+
+.carnes {
+  grid-area: carnes;
+  display: grid;
+}
+
+.mariscos {
+  grid-area: mariscos;
+  display: grid;
+}
+
+.ninos {
+  grid-area: ninos;
+  display: grid;
+}
+
+.postres {
+  grid-area: postres;
+  display: grid;
 }
 
 /*# sourceMappingURL=main.css.map */
