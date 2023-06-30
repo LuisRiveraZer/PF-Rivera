@@ -1,20 +1,44 @@
+$color-primario: #333;
+$color-secundario: #f5f5f5;
+
+@mixin recuadro {
+    display: grid;
+    background-color: $color-secundario;
+    overflow: hidden;
+    background-position: center;
+    background-size: 35%;
+    background-repeat: no-repeat;
+}
 
 .gridIndex{
     display: grid;
     width: auto;
     height: auto;
 
-    grid-template-columns: repeat(3, 33.33vw, 33.33vw, 33.33vw);
+    grid-template-columns: repeat(3, 200px, 33.33vw, 33.33vw);
     grid-template-rows: repeat(4, 250px);
         
         grid-template-areas: 
         "header presentacion presentacion"
         "nav bebidas desayunos"
         "nav carnes mariscos"
-        "0 ninos postres";
+        "o ninos postres"
+        "footer footer footer";
         
         column-gap: 5px;
         row-gap: 5px; 
+
+        img{
+            width: auto;
+            height: auto;
+            object-fit: cover;
+        }
+}
+
+
+.o{
+    grid-area: o;
+    display: grid;
 }
 header{
     grid-area: header;
@@ -23,44 +47,51 @@ header{
     align-items: center;
     margin-left: 5px;
     margin-right: 5px;
+    background-color: $color-primario;
 }
 .presentacion{
     grid-area: presentacion;
     display: grid;
+    background-color: $color-secundario;
     justify-content: center;
     align-items: center;
     height: auto;
-    width: auto;
-    background-color: #f5f5f5;
+    width: auto; 
 }
 nav{
     grid-area: nav;
     display: grid;
+    background-color: $color-secundario;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center; 
 }
 .bebidas{
     grid-area: bebidas;
-    display: grid;
+    @include recuadro();
+    background-image:  url("../media/img/refrescos.png");
 }
 .desayunos{
     grid-area: desayunos;
-    display: grid;
+    @include recuadro();
+    background-image: url("../media/img/desayuno.png");
 }
 .carnes{
     grid-area: carnes;
-    display: grid;
+    @include recuadro();
+    background-image: url("../media/img/carne.png")
 }
 .mariscos{
     grid-area: mariscos;
-    display: grid;
+    @include recuadro();
+    background-image: url("../media/img/mariscos.png")
 }
 .ninos{
     grid-area: ninos;
-    display: grid;
+    @include recuadro();
+    background-image: url("../media/img/bebe.png")
 }
 .postres{
     grid-area: postres;
-    display: grid;
+    @include recuadro();
+    background-image: url("../media/img/dulces.png")
 }
