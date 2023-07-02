@@ -1,13 +1,34 @@
-$color-primario: #333;
-$color-secundario: #cacaca;
+$color-primario: rgb(51, 51, 51);
+$color-secundario: rgb(202, 202, 202);
+
 
 @mixin recuadro {
-    display: grid;
+    display: inline-block;
+    height: 33%;
+    width: 49.5%;
     background-color: $color-secundario;
+    color: $color-primario;
+
     overflow: hidden;
-    background-position: center;
     background-size: 35%;
     background-repeat: no-repeat;
+    text-align: center;
+    border-radius: 10px;
+
+    a{
+        text-decoration: none;
+        color: #333;
+    }
+    img{
+        width: 60%;
+        height: 60%;
+        vertical-align: middle;
+    }
+    p{
+        font-size: 2vw;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+    }
 }
 
 .gridIndex{
@@ -20,19 +41,19 @@ $color-secundario: #cacaca;
         
         grid-template-areas: 
         "header presentacion presentacion"
-        "nav bebidas desayunos"
-        "nav carnes mariscos"
-        "o ninos postres"
+        "nav main main"
+        "nav main main"
+        "o main main"
         "footer footer footer";
         
         column-gap: 5px;
         row-gap: 5px; 
 
-        img{
-            width: auto;
-            height: auto;
-            object-fit: cover;
-        }
+        // img{
+        //     width: auto;
+        //     height: auto;
+        //     object-fit: cover;
+        // }
 }
 
 
@@ -40,16 +61,7 @@ $color-secundario: #cacaca;
     grid-area: o;
     display: grid;
 }
-header{
-    grid-area: header;
-    display: grid;
-    background-color: $color-primario;
-    justify-content: center;
-    align-items: center;
-    margin-left: 5px;
-    margin-right: 5px;
-    
-}
+
 .presentacion{
     grid-area: presentacion;
     display: grid;
@@ -59,41 +71,36 @@ header{
     height: auto;
     width: auto; 
     font-size: 3vw;
+    
+    h2{
+        font-size: 3vw;
+        color: $color-primario;
+    }
+    p{
+        font-size: 2vw;
+    }
 }
-nav{
-    grid-area: nav;
-    display: grid;
-    background-color: $color-secundario;
-    justify-content: center;
-    align-items: center; 
+
+main{
+    grid-area: main;
 }
+
 .bebidas{
-    grid-area: bebidas;
     @include recuadro();
-    background-image:  url("../media/img/refrescos.png");
+
 }
 .desayunos{
-    grid-area: desayunos;
     @include recuadro();
-    background-image: url("../media/img/desayuno.png");
 }
 .carnes{
-    grid-area: carnes;
     @include recuadro();
-    background-image: url("../media/img/carne.png")
 }
 .mariscos{
-    grid-area: mariscos;
     @include recuadro();
-    background-image: url("../media/img/mariscos.png")
 }
 .ninos{
-    grid-area: ninos;
     @include recuadro();
-    background-image: url("../media/img/bebe.png")
 }
 .postres{
-    grid-area: postres;
     @include recuadro();
-    background-image: url("../media/img/dulces.png")
 }

@@ -36,7 +36,21 @@
   padding: 0;
 }
 
+body {
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 10px;
+}
+
 header {
+  grid-area: header;
+  display: grid;
+  background-color: rgb(51, 51, 51);
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
   top: 0;
   left: 0;
   padding: 10px;
@@ -48,8 +62,13 @@ header h1 a {
 }
 
 nav {
+  grid-area: nav;
+  display: grid;
   height: auto;
   width: auto;
+  background-color: rgb(202, 202, 202);
+  justify-content: center;
+  align-items: center;
 }
 nav ul {
   list-style: none;
@@ -78,14 +97,9 @@ nav ul li a:hover {
   height: 100%;
   grid-template-columns: repeat(1, 20% 40% 40%);
   grid-template-rows: repeat(1, 10vw 25vw 25vw 25vw);
-  grid-template-areas: "header presentacion presentacion" "nav bebidas desayunos" "nav carnes mariscos" "o ninos postres" "footer footer footer";
+  grid-template-areas: "header presentacion presentacion" "nav main main" "nav main main" "o main main" "footer footer footer";
   column-gap: 5px;
   row-gap: 5px;
-}
-.gridIndex img {
-  width: auto;
-  height: auto;
-  object-fit: cover;
 }
 
 .o {
@@ -93,99 +107,188 @@ nav ul li a:hover {
   display: grid;
 }
 
-header {
-  grid-area: header;
-  display: grid;
-  background-color: #333;
-  justify-content: center;
-  align-items: center;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
 .presentacion {
   grid-area: presentacion;
   display: grid;
-  background-color: #cacaca;
+  background-color: rgb(202, 202, 202);
   text-align: center;
   align-items: center;
   height: auto;
   width: auto;
   font-size: 3vw;
 }
+.presentacion h2 {
+  font-size: 3vw;
+  color: rgb(51, 51, 51);
+}
+.presentacion p {
+  font-size: 2vw;
+}
 
-nav {
-  grid-area: nav;
-  display: grid;
-  background-color: #cacaca;
-  justify-content: center;
-  align-items: center;
+main {
+  grid-area: main;
 }
 
 .bebidas {
-  grid-area: bebidas;
-  display: grid;
-  background-color: #cacaca;
+  display: inline-block;
+  height: 33%;
+  width: 49.5%;
+  background-color: rgb(202, 202, 202);
+  color: rgb(51, 51, 51);
   overflow: hidden;
-  background-position: center;
   background-size: 35%;
   background-repeat: no-repeat;
-  background-image: url("../media/img/refrescos.png");
+  text-align: center;
+  border-radius: 10px;
+}
+.bebidas a {
+  text-decoration: none;
+  color: #333;
+}
+.bebidas img {
+  width: 60%;
+  height: 60%;
+  vertical-align: middle;
+}
+.bebidas p {
+  font-size: 2vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 }
 
 .desayunos {
-  grid-area: desayunos;
-  display: grid;
-  background-color: #cacaca;
+  display: inline-block;
+  height: 33%;
+  width: 49.5%;
+  background-color: rgb(202, 202, 202);
+  color: rgb(51, 51, 51);
   overflow: hidden;
-  background-position: center;
   background-size: 35%;
   background-repeat: no-repeat;
-  background-image: url("../media/img/desayuno.png");
+  text-align: center;
+  border-radius: 10px;
+}
+.desayunos a {
+  text-decoration: none;
+  color: #333;
+}
+.desayunos img {
+  width: 60%;
+  height: 60%;
+  vertical-align: middle;
+}
+.desayunos p {
+  font-size: 2vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 }
 
 .carnes {
-  grid-area: carnes;
-  display: grid;
-  background-color: #cacaca;
+  display: inline-block;
+  height: 33%;
+  width: 49.5%;
+  background-color: rgb(202, 202, 202);
+  color: rgb(51, 51, 51);
   overflow: hidden;
-  background-position: center;
   background-size: 35%;
   background-repeat: no-repeat;
-  background-image: url("../media/img/carne.png");
+  text-align: center;
+  border-radius: 10px;
+}
+.carnes a {
+  text-decoration: none;
+  color: #333;
+}
+.carnes img {
+  width: 60%;
+  height: 60%;
+  vertical-align: middle;
+}
+.carnes p {
+  font-size: 2vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 }
 
 .mariscos {
-  grid-area: mariscos;
-  display: grid;
-  background-color: #cacaca;
+  display: inline-block;
+  height: 33%;
+  width: 49.5%;
+  background-color: rgb(202, 202, 202);
+  color: rgb(51, 51, 51);
   overflow: hidden;
-  background-position: center;
   background-size: 35%;
   background-repeat: no-repeat;
-  background-image: url("../media/img/mariscos.png");
+  text-align: center;
+  border-radius: 10px;
+}
+.mariscos a {
+  text-decoration: none;
+  color: #333;
+}
+.mariscos img {
+  width: 60%;
+  height: 60%;
+  vertical-align: middle;
+}
+.mariscos p {
+  font-size: 2vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 }
 
 .ninos {
-  grid-area: ninos;
-  display: grid;
-  background-color: #cacaca;
+  display: inline-block;
+  height: 33%;
+  width: 49.5%;
+  background-color: rgb(202, 202, 202);
+  color: rgb(51, 51, 51);
   overflow: hidden;
-  background-position: center;
   background-size: 35%;
   background-repeat: no-repeat;
-  background-image: url("../media/img/bebe.png");
+  text-align: center;
+  border-radius: 10px;
+}
+.ninos a {
+  text-decoration: none;
+  color: #333;
+}
+.ninos img {
+  width: 60%;
+  height: 60%;
+  vertical-align: middle;
+}
+.ninos p {
+  font-size: 2vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 }
 
 .postres {
-  grid-area: postres;
-  display: grid;
-  background-color: #cacaca;
+  display: inline-block;
+  height: 33%;
+  width: 49.5%;
+  background-color: rgb(202, 202, 202);
+  color: rgb(51, 51, 51);
   overflow: hidden;
-  background-position: center;
   background-size: 35%;
   background-repeat: no-repeat;
-  background-image: url("../media/img/dulces.png");
+  text-align: center;
+  border-radius: 10px;
+}
+.postres a {
+  text-decoration: none;
+  color: #333;
+}
+.postres img {
+  width: 60%;
+  height: 60%;
+  vertical-align: middle;
+}
+.postres p {
+  font-size: 2vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 }
 
 .footer {

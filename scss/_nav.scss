@@ -1,7 +1,14 @@
+$color-primario: rgb(51, 51, 51);
+$color-secundario: rgb(202, 202, 202);
+
 nav {
+    grid-area: nav;
+    display: grid;
     height: auto;
     width: auto;
-    
+    background-color: $color-secundario;
+    justify-content: center;
+    align-items: center; 
 
     ul {
         list-style: none;

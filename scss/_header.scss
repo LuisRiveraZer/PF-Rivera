@@ -1,5 +1,14 @@
+$color-primario: rgb(51, 51, 51);
+$color-secundario: rgb(202, 202, 202);
 
 header {
+    grid-area: header;
+    display: grid;
+    background-color: $color-primario;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
     top: 0;
     left: 0;
     padding: 10px;
@@ -13,4 +22,3 @@ header {
         }
     } 
 }
-  
