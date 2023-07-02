@@ -37,7 +37,7 @@ $color-secundario: rgb(202, 202, 202);
     height: 100%;
 
     grid-template-columns: repeat(1, 20% 40% 40%);
-    grid-template-rows: repeat(1, 10vw 25vw 25vw 25vw);
+    grid-template-rows: repeat(1, 10vw 25vw 25vw);
         
         grid-template-areas: 
         "header presentacion presentacion"
@@ -48,12 +48,6 @@ $color-secundario: rgb(202, 202, 202);
         
         column-gap: 5px;
         row-gap: 5px; 
-
-        // img{
-        //     width: auto;
-        //     height: auto;
-        //     object-fit: cover;
-        // }
 }
 
 
@@ -103,4 +97,23 @@ main{
 }
 .postres{
     @include recuadro();
+}
+
+.gridIndex{
+    display: grid;
+    width: 100%;
+    height: 100%;
+
+    grid-template-columns: repeat(1, 20% 40% 40%);
+    grid-template-rows: repeat(1, 10vw 25vw 25vw 25vw);
+        
+        grid-template-areas: 
+        "header presentacion presentacion presentacion"
+        "nav main main main"
+        "nav main main main"
+        "o main main main"
+        "footer footer footer footer";
+        
+        column-gap: 5px;
+        row-gap: 5px; 
 }
