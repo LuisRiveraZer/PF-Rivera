@@ -303,6 +303,33 @@ main {
   row-gap: 5px;
 }
 
+.menu1 {
+  display: inline-block;
+  height: 33%;
+  width: 32%;
+  background-color: rgb(202, 202, 202);
+  color: rgb(51, 51, 51);
+  overflow: hidden;
+  background-size: 35%;
+  background-repeat: no-repeat;
+  text-align: center;
+  border-radius: 10px;
+}
+.menu1 a {
+  text-decoration: none;
+  color: #333;
+}
+.menu1 img {
+  width: 60%;
+  height: 60%;
+  vertical-align: middle;
+}
+.menu1 p {
+  font-size: 2vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
 .footer {
   grid-area: footer;
   display: grid;
