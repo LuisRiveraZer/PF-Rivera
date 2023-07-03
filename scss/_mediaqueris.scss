@@ -1,0 +1,93 @@
+@media (max-width: 992px) {
+
+    
+    .gridIndex{
+        display: grid;
+       
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5, 65px 100px 300px 400px 0px);
+            
+            grid-template-areas: 
+            "header"
+            "presentacion"
+            "nav"
+            "main"
+            "footer";
+            
+        column-gap: 5px;
+        row-gap: 5px; 
+    }
+
+header{
+h1{
+    a{
+        font-size: 50px;
+    }
+  } 
+}
+
+.presentacion{
+    h2{
+        font-size: 45px;
+    }
+    p{
+        font-size: 2vh;
+    }
+}
+
+nav{
+    ul{
+        text-align: center;
+        li{
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+            display: inline-block;
+            
+            a {
+                display: block;
+                padding: 15px;
+                font-size: 20px;
+            }
+            
+        }
+    }
+}
+
+@mixin index-recuadro {
+    width: 100%;
+    height: 60%;
+    img{
+        width: 200px;
+        height: 200px;
+        vertical-align: middle;
+        margin-bottom: 5px
+    }
+    p{
+        font-size: 25px;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+    }
+}
+
+.bebidas{
+    @include index-recuadro();
+
+}
+.desayunos{
+    @include index-recuadro();
+}
+.carnes{
+    @include index-recuadro();
+}
+.mariscos{
+    @include index-recuadro();
+}
+.ninos{
+    @include index-recuadro();
+}
+.postres{
+    @include index-recuadro();
+}
+
+}

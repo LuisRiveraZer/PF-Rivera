@@ -118,7 +118,7 @@ main{
         row-gap: 5px; 
 }
 
-@mixin pages-recuadro{
+.menu1 {
     display: inline-block;
     height: 33%;
     width: 32%;
@@ -147,6 +147,3 @@ main{
     }
 }
 
-.menu1{
-    @include pages-recuadro();
-}
