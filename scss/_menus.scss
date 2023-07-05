@@ -139,8 +139,10 @@ main{
         width: 60%;
         height: 60%;
         vertical-align: middle;
+        height: max-content;
+        width: 200px;
     }
-    p{
+    h3{
         font-size: 2vw;
         margin-top: 3vh;
         margin-bottom: 3vh;
