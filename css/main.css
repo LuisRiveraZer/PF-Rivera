@@ -89,7 +89,8 @@ nav ul li a {
 }
 nav ul li a:hover {
   transition: all 0.5s;
-  margin: 15px;
+  margin: 5px;
+  color: 111;
 }
 
 .gridIndex {
@@ -339,7 +340,7 @@ main {
   .gridIndex {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(5, 65px 100px 300px 400px 0px);
+    grid-template-rows: max-content;
     grid-template-areas: "header" "presentacion" "nav" "main" "footer";
     column-gap: 5px;
     row-gap: 5px;
@@ -367,9 +368,12 @@ main {
     padding: 15px;
     font-size: 20px;
   }
+  nav ul li a:hover {
+    margin: 0;
+  }
   .bebidas {
     width: 100%;
-    height: 60%;
+    height: fit-content;
   }
   .bebidas img {
     width: 200px;
@@ -380,11 +384,11 @@ main {
   .bebidas p {
     font-size: 25px;
     margin-top: 3vh;
-    margin-bottom: 3vh;
+    margin-bottom: 1vh;
   }
   .desayunos {
     width: 100%;
-    height: 60%;
+    height: fit-content;
   }
   .desayunos img {
     width: 200px;
@@ -395,11 +399,11 @@ main {
   .desayunos p {
     font-size: 25px;
     margin-top: 3vh;
-    margin-bottom: 3vh;
+    margin-bottom: 1vh;
   }
   .carnes {
     width: 100%;
-    height: 60%;
+    height: fit-content;
   }
   .carnes img {
     width: 200px;
@@ -410,11 +414,11 @@ main {
   .carnes p {
     font-size: 25px;
     margin-top: 3vh;
-    margin-bottom: 3vh;
+    margin-bottom: 1vh;
   }
   .mariscos {
     width: 100%;
-    height: 60%;
+    height: fit-content;
   }
   .mariscos img {
     width: 200px;
@@ -425,11 +429,11 @@ main {
   .mariscos p {
     font-size: 25px;
     margin-top: 3vh;
-    margin-bottom: 3vh;
+    margin-bottom: 1vh;
   }
   .ninos {
     width: 100%;
-    height: 60%;
+    height: fit-content;
   }
   .ninos img {
     width: 200px;
@@ -440,11 +444,11 @@ main {
   .ninos p {
     font-size: 25px;
     margin-top: 3vh;
-    margin-bottom: 3vh;
+    margin-bottom: 1vh;
   }
   .postres {
     width: 100%;
-    height: 60%;
+    height: fit-content;
   }
   .postres img {
     width: 200px;
@@ -455,7 +459,7 @@ main {
   .postres p {
     font-size: 25px;
     margin-top: 3vh;
-    margin-bottom: 3vh;
+    margin-bottom: 1vh;
   }
 }
 
